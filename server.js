@@ -9,6 +9,12 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
+app.get("/json", (req, res) => {
+  res.json({
+    message: "Hey"
+  });
+});
+
 app.listen(PORT, () => {
   console.log("Connected to port " + PORT);
 });
